@@ -1,4 +1,8 @@
+const url = ('https://whois.fdnd.nl/api/v1/member/ralph-kocken')
+const data = await fetch (url).then((response) => response.json())
+
 // Importeer express uit de node_modules map
+
 import express from 'express'
 
 // Maak een nieuwe express app aan
@@ -11,11 +15,7 @@ app.set('views', './views')
 // Gebruik de map 'public' voor statische resources
 app.use(express.static('public'))
 
-const url = ('https://whois.fdnd.nl/api/v1/member/ralph-kocken')
-const data = await fetch (url).then((response) => response.json())
-
 fetch(url) .then((response) => response.json()) .then((data) => console.log(data));
-
 
 // Maak een route voor de index
 app.get('/', function (req, res) {
