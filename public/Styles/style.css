@@ -1,0 +1,375 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-bg-color: #daf8fa;
+    --main-text-color: black;
+}
+
+body{
+  background-color: var(--main-bg-color);
+    font-family: roboto, sans-serif;
+    overflow: hidden;
+}
+
+/*UTILITY*/
+
+.big-text{
+    font-size: 3rem;
+    font-weight: 700;
+    width: max-content;
+}
+
+.regular-text{
+    font-size: 2rem;
+    font-weight: 400;
+    width: max-content;
+}
+
+.card{
+    position: relative;
+    margin: 0 auto;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/*FRAME 1*/
+
+.frame1, .frame2, .frame3, .frame4, .frame5, .frame6, .frame7{
+    position: absolute;
+    top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 5% 0 0 10%;
+    opacity: 0;
+}
+
+.frame1-animation{
+animation: fade-in-text 5s forwards 3s;
+}
+
+.frame2-animation{
+    animation: fade-in-text 5s forwards 8s;
+}
+
+.frame3-animation{
+    animation: fade-in-text 5s forwards 13s;
+}
+
+.frame4-animation{
+    animation: fade-in-text 5s forwards 18s;
+}
+
+.frame5-animation{
+    animation: fade-in-text 5s forwards 23s;
+}
+
+.frame6-animation{
+    animation: fade-in-text 5s forwards 28s;
+}
+
+.frame7-animation{
+    animation: fade-in-text 5s forwards 33s;
+}
+
+.line-4{
+    z-index: 999;
+}
+
+@keyframes fade-in-text{
+    0%
+    {opacity: 0}
+
+    20%
+    {opacity: 1}
+
+    80%
+    {opacity: 1;}
+
+    100%{
+        opacity: 0;
+    }
+}
+
+.trees-houses-wrapper{
+    z-index: 9;
+    position: absolute;
+    width: 1500px;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 6rem;
+    bottom: 13%;
+    right: calc(0px - 1500px);
+    animation: move-trees-houses-wrapper 7.5s linear infinite;
+}
+
+.tree{
+    width: 10rem;
+}
+
+.house{
+    width: 10rem;
+}
+
+@keyframes move-trees-houses-wrapper{
+    to{
+        right: 100vw;
+    }
+}
+
+.clouds{
+    position: absolute;
+    display: flex;
+    gap: 30vw;
+    top: 10%;
+    right: calc(0px - 1500px);
+    z-index: -1;
+    width: 1500px;
+    animation: move-clouds 20s linear infinite;
+}
+
+.cloud{
+    width: 10rem;
+}
+
+@keyframes move-clouds{
+    to{
+        right: 100vw;
+    }
+}
+
+/*HILL*/
+
+.hill{
+    position: absolute;
+    right: calc(0px - 20rem);
+    bottom: calc(14% + 5rem);
+    width: 20rem;
+    max-width: 25rem;
+    animation: move-hill 30s linear infinite;
+}
+
+@keyframes move-hill{
+    to{
+        right: 100vw;
+    }
+}
+
+/*STADIUM*/
+
+@keyframes move-stadium{
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+    transform: translateX(-60rem)
+    }
+}
+
+/*LEGO TRUCK*/
+
+.lego-wrapper{
+    position: absolute;
+    bottom: 8%;
+    right: -30rem;
+    z-index: 1;
+    animation: move-lego-truck 5s linear forwards 28s;
+}
+
+.lego{
+    position: relative;
+}
+
+.legotruck{
+    width: 18rem;
+}
+
+.legowheel{
+    position: absolute;
+    width: 2.5rem;
+    animation: rotate-lego-wheel 0.7s linear infinite;
+}
+
+.lego-wheel-1{
+    bottom: 4px;
+    left: 28px;
+}
+
+.lego-wheel-2{
+    bottom: 4px;
+    left: 207px;
+}
+
+@keyframes move-lego-truck{
+    from {
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translateX(-2500px);
+    }
+}
+
+@keyframes rotate-lego-wheel{
+    to{
+        transform: rotate(-360deg);
+    }
+}
+
+/*ROAD*/
+
+.road{
+    position: absolute;
+    border-top: 1rem solid green;
+    bottom: 0;
+    left: -50px;
+    height: 14%;
+    width: 150%;
+    background-color: #5e5e5d;
+}
+
+.road::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    height: 0.5rem;
+    background: linear-gradient(90deg, #fff 0%, #fff 70%, #5e5e5d 70%, #5e5e5d 100%);
+    background-size: 90px;
+    animation: moving-stripes 0.35s linear infinite;
+}
+
+@keyframes moving-stripes{
+    0%{
+        background-position: 0px;
+    }
+
+    100%{
+        background-position: -90px;
+    }
+}
+
+/*FIELD*/
+
+.field{
+    z-index: -1;
+    position: absolute;
+    bottom: 14%;
+    height: 5rem;
+    width: 100%;
+    background-image: linear-gradient(to bottom, #3d911b, #54aa2e, #6bc340, #82dd52, #9af764);
+}
+
+/*CAR AND WHEELS */
+
+.car{
+    position: absolute;
+    left: 40px;
+    bottom: 10px;
+    z-index: 10;
+    width: 300px;
+    transform: scaleX(-1);
+}
+
+.wheel1{
+    position: absolute;
+    z-index: 11;
+    left: 72px;
+    bottom: 10px;
+    width: 4.2rem;
+    animation: rotate-wheel 0.7s linear infinite;
+}
+
+.wheel2{
+    position: absolute;
+    z-index: 11;
+    left: 234px;
+    bottom: 10px;
+    width: 4.2rem;
+    animation: rotate-wheel 0.7s linear infinite;
+}
+
+@keyframes rotate-wheel{
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+    @media only screen and (min-width: 520px){
+
+        .road::before{
+            animation: moving-stripes 0.32s linear infinite;
+        }
+    }
+
+    @media only screen and (min-width: 675px){
+        .road::before{
+            animation: moving-stripes 0.3s linear infinite;
+        }
+    }
+
+    @media only screen and (min-width: 750px){
+        .road::before{
+            animation: moving-stripes 0.29s linear infinite;
+        }
+    }
+
+    @media only screen and (min-width: 850px){
+        .road::before{
+            animation: moving-stripes 0.28s linear infinite;
+        }
+    }
+
+    
+    @media only screen and (min-width: 950px){
+        .road::before{
+            animation: moving-stripes 0.27s linear infinite;
+        }
+    }
+
+    @media only screen and (min-width: 1050px){
+        .road::before{
+            animation: moving-stripes 0.26s linear infinite;
+        }
+    }
+    @media only screen and (min-width: 1150px){
+        .road::before{
+            animation: moving-stripes 0.25s linear infinite;
+        }
+    }
+    @media only screen and (min-width: 1250px){
+        .road::before{
+            animation: moving-stripes 0.24s linear infinite;
+        }
+    }
+    @media only screen and (min-width: 1350px){
+        .road::before{
+            animation: moving-stripes 0.23s linear infinite;
+        }
+    }
+    @media only screen and (min-width: 1450px){
+        .road::before{
+            animation: moving-stripes 0.22s linear infinite;
+        }
+    }
+    @media only screen and (min-width: 1550px){
+        .road::before{
+            animation: moving-stripes 0.21s linear infinite;
+        }
+    }
+    @media only screen and (min-width: 1650px){
+        .road::before{
+            animation: moving-stripes 0.20s linear infinite;
+        }
+    }
+    @media only screen and (min-width: 1750px){
+        .road::before{
+            animation: moving-stripes 0.19s linear infinite;
+        }
+    }

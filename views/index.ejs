@@ -1,8 +1,96 @@
 <%- include('./partials/head') %>
 
-<article>
-  <h1>Hallo wereld!</h1>
-  <p>Alles werk! Laat dit visitekaartje in je browser aan een docent zien :D</p>
-</article>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/Styles/style.css" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <title>Ralph's Card</title>
+</head>
+<body>
+    <section class="card">
+        <section class="frame1 frame1-animation">
+            <span class="big-text line-1">Hi!</span>
+            <span class="regular-text line-2">My name is</span>
+            <span class="big-text line-3"><%= member.name %></span>
+            <span class="big-text line-4"><%= member.surname %></span>
+        </section>
 
+        <section class="frame2 frame2-animation">
+            <span class="regular-text">I'd like to</span>
+            <span class="regular-text">tell you some things</span>
+            <span class="regular-text">about myself</span>
+        </section>    
+
+        <section class="frame3 frame3-animation">
+            <span class="regular-text">for example</span>
+        </section>  
+
+        <section class="frame4 frame4-animation">
+            <span class="regular-text">I'm 28 years old,</span>
+            <span class="regular-text">and I was born in Alkmaar,</span>
+            <span class="regular-text">but I now live in Heiloo</span>
+        </section> 
+
+        <section class="frame5 frame5-animation">
+            <span class="regular-text">I like to </span>
+            <span class="regular-text">play football</span>
+            <span class="regular-text">and play videogames</span>
+        </section> 
+
+        <section class="frame6 frame6-animation">
+            <span class="regular-text">but I also like</span>
+            <span class="regular-text">to build Lego</span>
+        </section> 
+
+        <section class="frame7 frame7-animation">
+            <span class="regular-text"></span>
+            <span class="regular-text"></span>
+            <span class="regular-text"></span>
+        </section> 
+
+        <section class="clouds">
+            <img class="cloud" src="/Images/cloud.png">
+            <img class="cloud" src="/Images/cloud.png">
+            <img class="cloud" src="/Images/cloud.png">
+        </section>
+
+        <section class="trees-houses-wrapper"> 
+                <img class="tree tree-1" src="/Images/pngwing.com (1).png">
+                <img class="house house-1" src="/Images/house1.png">
+                <img class="tree tree-2" src="/Images/pngwing.com.png">
+                <img class="tree tree-4" src="/Images/pngwing.com (1).png">
+                <img class="tree tree-3" src="/Images/pngwing.com.png">
+                <img class="tree tree-5" src="/Images/pngwing.com (1).png">
+        </section>
+           
+        <section class="car-wheels">
+            <img class="car" src="/Images/carpng.png">
+            <img class="wheel1" src="/Images/wheel.png">
+            <img class="wheel2" src="/Images/wheel.png">
+        </section>
+
+        <div class="lego-wrapper">
+            <div class="lego">
+                <img class="legotruck" src="/Images/legotruck.png">
+                <img class="legowheel lego-wheel-1" src="/Images/lego-wheel.png">
+                <img class="legowheel lego-wheel-2" src="/Images/lego-wheel.png">
+            </div>
+        </div>
+
+        <img class="hill" src="/Images/hill-1.png">
+
+        <!-- <img class="stadium" src="/Images/stadium.png"> -->
+
+        <div class="road"></div>
+
+        <div class="field"></div>
+    
+    </section>
+    
 <%- include('./partials/foot') %>
