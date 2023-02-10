@@ -26,7 +26,7 @@ In deze opdracht heb ik weer een visitekaartje gemaakt. Ik wilde aan de hand van
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
 
-Deze website is gemaakt me Node. Er zitten veel animaties in die met elkaar synchroon lopen.
+Deze website is gemaakt met Node. Er zitten veel animaties in die met elkaar synchroon lopen.
 
 ## Licentie
 
